@@ -1,4 +1,4 @@
-import { merge } from "../src/merge.js";
+import { merge } from "../src/merge";
 
 describe("merge function", () => {
   it("merges three sorted arrays correctly", () => {
@@ -16,7 +16,7 @@ describe("merge function", () => {
     const c3: number[] = [5, 3, 1];
 
     const result = merge(c1, c2, c3);
-    expect(result).toEqual([1, 3, 5, 2, 4].sort((a, b) => a - b));
+    expect(result).toEqual([1, 2, 3, 4, 5]);
   });
 
   it("works when all arrays empty", () => {
@@ -31,7 +31,7 @@ describe("merge function", () => {
 
     const result = merge(c1, c2, c3);
     expect(result).toEqual(
-      [-10, -9, -5, -1, 0, 1, 3, 5, 2].sort((a, b) => a - b)
+      [-10, -9, -5, -1, 0, 1, 2, 3, 5]
     );
   });
 });

@@ -33,3 +33,4 @@ function mergeTwo(array1, array2) {
     }
     return result;
 }
+//# sourceMappingURL=merge.js.map
